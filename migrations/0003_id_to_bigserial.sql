@@ -1,0 +1,1 @@
+ALTER TABLE jobs drop column id, add column id bigserial primary key;

@@ -1,0 +1,25 @@
+[package]
+name = "job_tracker_back"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+thiserror = "1.0.56"
+tokio = { version = "*", features = ["full"] }
+warp = "*"
+
+serde = "*"
+serde_json = "*"
+serde_derive = "*"
+chrono = {version = "0.4", features = ["serde"]}
+
+sqlx = { version = "*", features = [ "runtime-tokio", "postgres", "macros", "chrono", "json", "bigdecimal"] }
+urlencoding = "*"
+dotenvy = "*"
+dotenvy_macro = "*"
+dotenv = "0.15.0"
+
+[dev-dependencies]
+anyhow = "*"
